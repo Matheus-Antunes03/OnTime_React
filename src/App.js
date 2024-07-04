@@ -5,6 +5,7 @@ import { Cadastro } from "./pages/Cadastro"
 import { Cadastro_Cliente } from "./pages/Cadastro_Cliente"
 import { Cadastro_Estabelecimento } from './pages/Cadastro_Estabelecimento';
 import { Cadastro_Produto } from './pages/Cadastro_Produto';
+import { Cadastros_Lista } from './pages/Cadastros_Lista';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/cadastro_cliente' element={< Cadastro_Cliente />}/>
         <Route path='/cadastro_estabelecimento' element={< Cadastro_Estabelecimento />}/>
         <Route path='/cadastro_produto' element={< Cadastro_Produto />}/>
+        <Route path='/cadastros_lista' element={< Cadastros_Lista />}/>
       </Routes>
     </Router>
   );

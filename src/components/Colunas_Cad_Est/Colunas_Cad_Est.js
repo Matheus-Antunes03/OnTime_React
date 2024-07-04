@@ -115,12 +115,6 @@ export function Colunas_Cad_Est() {
                         <div id="coluna1">
                             <h2>Nome do estabelecimento</h2>
                             <input type="text" placeholder="Digite o nome do estabelecimento"/>
-                            <h2>Tipo de estabelecimento</h2>
-                            <select name="tipos" id="tipos">
-                                <option value="merceraria">Mercearia</option>
-                                <option value="supermercado">Supermercado</option>
-                                <option value="padaria">Padaria</option>
-                            </select>
                             <h2>Email</h2>
                             <input type="email" placeholder="email@email.com"/>
                             <h2>Senha</h2>

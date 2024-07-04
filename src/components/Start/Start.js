@@ -50,14 +50,18 @@ a{
     text-decoration: none;
     font-family: sans-serif;
     font-size: 150%;
-    margin: 2% 0 0 50%;
+    margin: 2% 0 0 30%;
     cursor: pointer;
     width: 100%;
     color: #ffffff;
 }
 
-#cadatro{
+#cadastro{
     color: #ffffff;
+}
+
+#lista{
+    margin: 0 20px 0 40px;
 }
 
 #entrar{
@@ -165,6 +169,7 @@ export function Start() {
             <a id="contato" href="contato.html" >Contato</a>
             <div id="cad">
                 <a id="cadastro" href="../../Cadastro" >Cadastre-se</a>
+                <a id="lista" href="../../Cadastros_Lista" >Cadastros</a>
                 <button id="entrar" >Entrar</button>
             </div>
         </div>
