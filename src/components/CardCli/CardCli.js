@@ -7,8 +7,8 @@ const Container = styled.div`
     }
 
     #card{
-        width: 100%;
-        height: 571px;
+        width: 80%;
+        height: 450px;
         background-color: #ffffff;
         border-radius: 50px;
         border: none;
@@ -25,7 +25,7 @@ const Container = styled.div`
         display: block;
         margin: auto auto auto auto;
         width: 84%;
-        height: 460px;
+        height: 400px;
         border-radius: 50px;
         border-width: 10px;
         border-style: solid;
@@ -39,7 +39,7 @@ const Container = styled.div`
     }
 
     #marca1{
-        width: 50%;
+        width: 70%;
         height: 70px;
         background-color: #ff4400;
         display: block;

@@ -34,12 +34,12 @@ const Container = styled.div`
 
     #souum{
         color: #ff4400;
-        font-size: 350%;
+        font-size: 260%;
         margin: 20px 0 0 0;
     }
 
-    #marca2{
-        width: 90%;
+    #marca1{
+        width: 70%;
         height: 70px;
         background-color: #ff4400;
         display: block;
@@ -50,30 +50,32 @@ const Container = styled.div`
     #clies{
         color: #ffffff;
         padding: 10px;
-        font-size: 240%;
+        font-size: 320%;
         margin: 10px auto auto auto;
     }
 
-    #loja{
+    #user{
         width: 50%;
         margin-top: 30px;
     }
 `;
 
-export function CardEst() {
+export function CardPed() {
     return (
-        <Container>
-            <a id="estabelecimento" href="../../Cadastro_Estabelecimento">
-                <button id="card">
-                    <div id="borda">
-                        <h1 id="souum">Sou um</h1>
-                        <div id="marca2">
-                            <h1 id="clies">Estabelecimento</h1>
+        <>
+            <Container>
+                <a id="cliente" href="../../Cadastro_Pedido">
+                    <button id="card">
+                        <div id="borda">
+                            <h1 id="souum">Quero fazer um</h1>
+                            <div id="marca1">
+                                <h1 id="clies">Pedido</h1>
+                            </div>
+                            <img id="user" src={require('../../images/user.png')} />
                         </div>
-                        <img id="loja" src={require('../../images/loja.png')} />
-                    </div>
-                </button>
-            </a>
-        </Container>
+                    </button>
+                </a>
+            </Container>
+        </>
     );
 }

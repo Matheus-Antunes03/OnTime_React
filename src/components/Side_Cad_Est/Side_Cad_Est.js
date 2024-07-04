@@ -11,7 +11,7 @@ const Container = styled.div`
     }
 
     #logo{
-        width: 80%;
+        width: 45%;
         margin: 10px 0 0 10px;
     }
 `

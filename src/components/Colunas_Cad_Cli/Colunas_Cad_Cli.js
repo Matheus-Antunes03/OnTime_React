@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Container = styled.div`
     #container{
         width: 80%;
-        height: 590px;
+        height: 550px;
         background-color: #ffffff;
         border-radius: 30px;
         margin: 0 500px 0 0;
@@ -64,8 +64,8 @@ const Container = styled.div`
 
     #cadastrar{
         display: block;
-        margin: 15px auto auto auto;
-        width: 20%;
+        margin: 50px auto auto auto;
+        width: 30%;
         height: 10%;
         border: none;
         background-color: #ff4400;
@@ -94,22 +94,10 @@ export function Colunas_Cad_Cli() {
                             <input type="text" placeholder="Digite seu nome completo"/>
                             <h2>Data de nascimento</h2>
                             <input type="date"/>
-                            <h2>Email</h2>
-                            <input type="email" placeholder="email@email.com"/>
-                            <h2>Senha</h2>
-                            <input type="password" placeholder="******"/>
+                            <h2>Telefone</h2>
+                            <input type="number" placeholder="(00) 90000-0000"/>
                             <h2>CPF</h2>
                             <input type="number" placeholder="000.000.000-00"/>
-                        </div>
-                        <div id="coluna2">
-                            <h2>CEP</h2>
-                            <input type="number" placeholder="00000.000-00"/>
-                            <h2>Estado</h2>
-                            <input type="text" placeholder="Digite seu estado"/>
-                            <h2>Cidade</h2>
-                            <input type="text" placeholder="Digite sua cidade"/>
-                            <h2>Endereço</h2>
-                            <input type="text" placeholder="Digite seu endereço"/>
                         </div>
                     </div>
                     <button id="cadastrar">Cadastrar</button>

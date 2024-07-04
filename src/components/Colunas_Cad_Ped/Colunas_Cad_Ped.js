@@ -77,8 +77,8 @@ const Container = styled.div`
 
     #cadastrar{
         display: block;
-        margin: 15px auto auto auto;
-        width: 30%;
+        margin: 40px auto auto auto;
+        width: 45%;
         height: 10%;
         border: none;
         background-color: #ff4400;
@@ -96,26 +96,24 @@ const Container = styled.div`
     }
 `
 
-export function Colunas_Cad_Prod() {
+export function Colunas_Cad_Ped() {
     return (
         <>
             <Container>
                 <div id="container">
                     <div id="colunas">
                         <div id="coluna1">
-                            <h2>Nome do produto</h2>
-                            <input type="text" placeholder="Digite o nome do produto"/>
-                            <h2>Marca</h2>
-                            <input type="text" placeholder="Digite a marca"/>
-                            <h2>Preço</h2>
-                            <input type="number" placeholder="R$ 0.00"/>
-                            <h2>Peso</h2>
-                            <input type="number" placeholder="0.00"/>
-                            <h2>Data de validade</h2>
-                            <input type="date"/>
+                            <h2>ID Usuário</h2>
+                            <input type="number" placeholder="Digite o ID do usuário"/>
+                            <h2>ID Produto</h2>
+                            <input type="number" placeholder="Digite o ID do produto"/>
+                            <h2>ID Estabelecimento</h2>
+                            <input type="number" placeholder="Digite o ID do estabelecimento"/>
+                            <h2>Quantidade</h2>
+                            <input type="number" placeholder="0"/>
                         </div>
                     </div>
-                    <button id="cadastrar">Cadastrar</button>
+                    <button id="cadastrar">Fazer Pedido</button>
                 </div>
             </Container>
         </>

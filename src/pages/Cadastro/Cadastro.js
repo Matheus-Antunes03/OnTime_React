@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import axios from "axios";
 import { CardCli } from "../../components/CardCli";
 import { CardEst } from "../../components/CardEst";
+import { CardPed } from "../../components/CardPed";
 
 const Container = styled.div`
     #content{
@@ -39,6 +40,7 @@ export function Cadastro() {
                     <div id="container">
                         <CardCli/>
                         <CardEst/>
+                        <CardPed/>
                     </div>
                 </div>
             </Container>

@@ -16,13 +16,13 @@ const Container = styled.div`
     }
 `
 
-export function Side_Cad_Prod() {
+export function Side_Cad_Ped() {
     return (
         <>
             <Container>
-                <h1>Cadastre</h1>
+                <h1>Faça</h1>
                 <h1>seu</h1>
-                <h1>produto</h1>
+                <h1>pedido</h1>
                 <h1>na</h1>
                 <img id="logo" src={require('../../images/ontime.png')} />
             </Container>
