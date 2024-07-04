@@ -9,6 +9,7 @@ const Container = styled.div`
     #content{
         background: rgb(255,68,0);
         background: linear-gradient(90deg, rgba(255,68,0,1) 19%, rgba(255,145,77,1) 100%);
+        height: 800px;
     }
 
     #ontime{
@@ -19,12 +20,15 @@ const Container = styled.div`
 
     #container{
         display: flex;
-        justify-content: space-around;
     }
 
     #voltar{
         width: 3%;
         margin: 20px 0 0 20px;
+    }
+
+    #cli{
+        margin-left: 5%;
     }
 `
 
@@ -38,7 +42,9 @@ export function Cadastro() {
                     </a>
                     <img id="ontime" src={require('../../images/ontime.png')} />
                     <div id="container">
-                        <CardCli/>
+                        <div id="cli">
+                            <CardCli/>
+                        </div>
                         <CardEst/>
                         <CardPed/>
                     </div>

@@ -50,7 +50,7 @@ const Container = styled.div`
     #clies{
         color: #ffffff;
         padding: 10px;
-        font-size: 240%;
+        font-size: 225%;
         margin: 10px auto auto auto;
     }
 
