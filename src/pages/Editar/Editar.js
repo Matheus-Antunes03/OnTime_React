@@ -51,7 +51,7 @@ export function Editar() {
         <>
             <Container>
                 <div id="page">
-                    <a href="../../Home">
+                    <a href="../../Cadastros_Lista">
                         <img id="voltar" src={require('../../images/voltar.png')} />
                     </a>
                     <img id="ontime" src={require('../../images/ontime.png')} />
