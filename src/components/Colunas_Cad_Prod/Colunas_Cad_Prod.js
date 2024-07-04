@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { createProduct } from '../../api/create-product';
 
 const Container = styled.div`
     #container{
@@ -50,7 +51,7 @@ const Container = styled.div`
         margin: 40px 0 0 150px;
     }
 
-    #unmed{
+    #unidadeMedida{
         border: none;
         outline: none;
         color: #ff4400;
@@ -78,7 +79,7 @@ const Container = styled.div`
     #cadastrar{
         display: block;
         margin: 15px auto auto auto;
-        width: 20%;
+        width: 30%;
         height: 10%;
         border: none;
         background-color: #ff4400;
@@ -94,44 +95,65 @@ const Container = styled.div`
         box-shadow: #ff4400 0px 7px 29px 0px;
         transform: translateY(-10px);
     }
-`
+`;
 
 export function Colunas_Cad_Prod() {
+    const [formData, setFormData] = useState({
+        nome: '',
+        marca: '',
+        precoOriginal: '',
+        dataValidade: '',
+        peso: '',
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevFormData) => ({
+            ...prevFormData,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const dataToSubmit = {
+            ...formData,
+        };
+        try {
+            const response = await createProduct(dataToSubmit);
+            console.log('Produto criado com sucesso:', response);
+        } catch (error) {
+            console.error('Erro ao criar produto:', error);
+        }
+    };
+
+    function janela(){
+        window.confirm("Cadastro efetuado")
+    }
+
     return (
         <>
             <Container>
-                <div id="container">
-                    <div id="colunas">
-                        <div id="coluna1">
-                            <h2>Nome do produto</h2>
-                            <input type="text" placeholder="Digite o nome do produto"/>
-                            <h2>Marca</h2>
-                            <input type="text" placeholder="Digite a marca"/>
-                            <h2>Preço original</h2>
-                            <input type="number" placeholder="R$ 0.00"/>
-                            <h2>Desconto (%)</h2>
-                            <input type="number" placeholder="%"/>
-                            <h2>Data de validade</h2>
-                            <input type="date"/>
+                <form onSubmit={handleSubmit}>
+                    <div id="container">
+                        <div id="colunas">
+                            <div id="coluna1">
+                                <h2>Nome do produto</h2>
+                                <input type="text" name="nome" placeholder="Digite o nome do produto" onChange={handleChange} />
+                                <h2>Marca</h2>
+                                <input type="text" name="marca" placeholder="Digite a marca" onChange={handleChange} />
+                                <h2>Preço</h2>
+                                <input type="number" name="precoOriginal" placeholder="R$ 0.00" onChange={handleChange} />
+                                <h2>Data de validade</h2>
+                                <input type="date" name="dataValidade" onChange={handleChange} />
+                                <h2>Peso</h2>
+                                <input type="number" name="peso" placeholder="0.00" onChange={handleChange} />
+                            </div>
                         </div>
-                        <div id="coluna2">
-                            <h2>Peso</h2>
-                            <input type="number" placeholder="0.00"/>
-                            <select name="unmed" id="unmed">
-                                <option value="gramas">Gramas</option>
-                                <option value="kilos">Kilos</option>
-                                <option value="mls">Mls</option>
-                                <option value="litros">Litros</option>
-                            </select>
-                            <h2>Imagem do produto</h2>
-                            <form action="/action_page.php">
-                                <input type="file" id="img" name="img" accept="image/*"/>
-                            </form>
-                        </div>
+                        <button onClick={janela} id="cadastrar">Cadastrar</button>
                     </div>
-                    <button id="cadastrar">Cadastrar</button>
-                </div>
+                </form>
             </Container>
         </>
-    )
+    );
 }

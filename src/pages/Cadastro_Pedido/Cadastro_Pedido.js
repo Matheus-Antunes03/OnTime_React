@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import axios from "axios";
-import { Side_Cad_Prod } from "../../components/Side_Cad_Prod";
-import { Colunas_Cad_Prod } from "../../components/Colunas_Cad_Prod";
+import { Side_Cad_Ped } from "../../components/Side_Cad_Ped";
+import { Colunas_Cad_Ped } from "../../components/Colunas_Cad_Ped";
 
 const Container = styled.div`
     #page{
@@ -21,7 +21,7 @@ const Container = styled.div`
     }
 `
 
-export function Cadastro_Produto() {
+export function Cadastro_Pedido() {
     return (
         <>
             <Container>
@@ -30,8 +30,8 @@ export function Cadastro_Produto() {
                         <img id="voltar" src={require('../../images/voltar.png')} />
                     </a>
                     <div id="content">
-                        <Side_Cad_Prod/>
-                        <Colunas_Cad_Prod/>
+                        <Side_Cad_Ped/>
+                        <Colunas_Cad_Ped/>
                     </div>
                 </div>
             </Container>

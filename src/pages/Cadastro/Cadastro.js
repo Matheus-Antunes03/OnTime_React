@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import axios from "axios";
 import { CardCli } from "../../components/CardCli";
 import { CardEst } from "../../components/CardEst";
+import { CardPed } from "../../components/CardPed";
+import { CardProd } from "../../components/CardProd";
 
 const Container = styled.div`
     #content{
@@ -19,6 +21,7 @@ const Container = styled.div`
     #container{
         display: flex;
         justify-content: space-around;
+        margin-top: 50px;
     }
 
     #voltar{
@@ -39,6 +42,10 @@ export function Cadastro() {
                     <div id="container">
                         <CardCli/>
                         <CardEst/>
+                    </div>
+                    <div id="container">
+                        <CardPed/>
+                        <CardProd/>
                     </div>
                 </div>
             </Container>

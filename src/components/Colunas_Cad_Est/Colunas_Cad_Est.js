@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { createEstablishment } from '../../api/create-establishment';
 
 const Container = styled.div`
     #container{
@@ -51,7 +52,7 @@ const Container = styled.div`
     }
 
     #coluna1{
-        margin: 20px 0 0 0;
+        margin: 50px 0 0 0;
     }
 
     #coluna2{
@@ -72,8 +73,8 @@ const Container = styled.div`
 
     #cadastrar{
         display: block;
-        margin: 15px auto auto auto;
-        width: 20%;
+        margin: 35px auto auto auto;
+        width: 25%;
         height: 10%;
         border: none;
         background-color: #ff4400;
@@ -104,49 +105,62 @@ const Container = styled.div`
         font-size: 15px;
         cursor: pointer;
     }
-`
+`;
 
 export function Colunas_Cad_Est() {
+    const [formData, setFormData] = useState({
+        nome: '',
+        endereco: '',
+        inscricaoMunicipal: '',
+        cnpj: '',
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevFormData) => ({
+            ...prevFormData,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const dataToSubmit = {
+            ...formData,
+        };
+        try {
+            const response = await createEstablishment(dataToSubmit);
+            console.log('Produto criado com sucesso:', response);
+        } catch (error) {
+            console.error('Erro ao criar produto:', error);
+        }
+    };
+
+    function janela(){
+        window.confirm("Cadastro efetuado")
+    }
+
     return (
         <>
             <Container>
-                <div id="container">
-                    <div id="colunas">
-                        <div id="coluna1">
-                            <h2>Nome do estabelecimento</h2>
-                            <input type="text" placeholder="Digite o nome do estabelecimento"/>
-                            <h2>Tipo de estabelecimento</h2>
-                            <select name="tipos" id="tipos">
-                                <option value="merceraria">Mercearia</option>
-                                <option value="supermercado">Supermercado</option>
-                                <option value="padaria">Padaria</option>
-                            </select>
-                            <h2>Email</h2>
-                            <input type="email" placeholder="email@email.com"/>
-                            <h2>Senha</h2>
-                            <input type="password" placeholder="******"/>
-                            <h2>CNPJ</h2>
-                            <input type="number" placeholder="00.000.000/0000-00"/>
+                <form onSubmit={handleSubmit}>
+                    <div id="container">
+                        <div id="colunas">
+                            <div id="coluna1">
+                                <h2>Nome do estabelecimento</h2>
+                                <input type="text" name="nome" placeholder="Digite o nome do estabelecimento" onChange={handleChange} />
+                                <h2>CNPJ</h2>
+                                <input type="number" name="cnpj" placeholder="00.000.000/0000-00" onChange={handleChange} />
+                                <h2>Endereço</h2>
+                                <input type="text" name="endereco" placeholder="Digite seu endereço" onChange={handleChange} />
+                                <h2>Inscrição municipal</h2>
+                                <input type="number" name="inscricaoMunicipal" placeholder="000.000.000-00" onChange={handleChange} />
+                            </div>
                         </div>
-                        <div id="coluna2">
-                            <h2>CEP</h2>
-                            <input type="number" placeholder="00000.000-00"/>
-                            <h2>Estado</h2>
-                            <input type="text" placeholder="Digite seu estado"/>
-                            <h2>Cidade</h2>
-                            <input type="text" placeholder="Digite sua cidade"/>
-                            <h2>Endereço</h2>
-                            <input type="text" placeholder="Digite seu endereço"/>
-                            <h2>Inscrição municipal</h2>
-                            <input type="number" placeholder="000.000.000-00"/>
-                        </div>
+                        <button onClick={janela} id="cadastrar">Cadastrar</button>
                     </div>
-                    <button id="cadastrar">Cadastrar</button>
-                </div>
-                <a href="../../Cadastro_Produto">
-                    <button id="produto">Cadastrar produto</button>
-                </a>
+                </form>
             </Container>
         </>
-    )
+    );
 }

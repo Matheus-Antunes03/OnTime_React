@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { createClient } from '../../api/create-client';
+import { createOrder } from '../../api/create-order';
 
 const Container = styled.div`
     #container{
-        width: 80%;
+        width: 90%;
         height: 590px;
         background-color: #ffffff;
         border-radius: 30px;
-        margin: 0 500px 0 0;
+        margin: 0 300px 0 0;
     }
 
     #colunas{
         display: flex;
-        margin: 0 0 0 50px;
+        margin: 0 0 0 30px;
     }
 
     h2{
@@ -44,11 +44,24 @@ const Container = styled.div`
     }
 
     #coluna1{
-        margin: 50px 0 0 0;
+        margin: 40px 0 0 50px;
     }
 
     #coluna2{
-        margin: 20px 0 0 150px;
+        margin: 40px 0 0 150px;
+    }
+
+    #unmed{
+        border: none;
+        outline: none;
+        color: #ff4400;
+    }
+
+    #img{
+        border: none;
+        background-color: #ff4400;
+        color: #ffffff;
+        cursor: pointer;
     }
 
     #termos{
@@ -65,8 +78,8 @@ const Container = styled.div`
 
     #cadastrar{
         display: block;
-        margin: 35px auto auto auto;
-        width: 30%;
+        margin: 40px auto auto auto;
+        width: 45%;
         height: 10%;
         border: none;
         background-color: #ff4400;
@@ -84,12 +97,12 @@ const Container = styled.div`
     }
 `;
 
-export function Colunas_Cad_Cli() {
+export function Colunas_Cad_Ped() {
     const [formData, setFormData] = useState({
-        nome: '',
-        dataNasc: '',
-        telefone: '',
-        cpf: '',
+        idUsuario: '',
+        idProduto: '',
+        idEstabelecimento: '',
+        quantidade: '',
     });
 
     const handleChange = (e) => {
@@ -106,15 +119,15 @@ export function Colunas_Cad_Cli() {
             ...formData,
         };
         try {
-            const response = await createClient(dataToSubmit);
-            console.log('Cliente criado com sucesso:', response);
+            const response = await createOrder(dataToSubmit);
+            console.log('Pedido criado com sucesso:', response);
         } catch (error) {
-            console.error('Erro ao criar cliente:', error);
+            console.error('Erro ao criar pedido:', error);
         }
     };
 
     function janela(){
-        window.confirm("Cadastro efetuado")
+        window.confirm("Pedido efetuado")
     }
 
     return (
@@ -124,17 +137,17 @@ export function Colunas_Cad_Cli() {
                     <div id="container">
                         <div id="colunas">
                             <div id="coluna1">
-                                <h2>Nome completo</h2>
-                                <input type="text" name='nome' placeholder="Digite seu nome completo" onChange={handleChange} />
-                                <h2>Data de nascimento</h2>
-                                <input type="date" name='dataNasc' onChange={handleChange} />
-                                <h2>Telefone</h2>
-                                <input type="text" name='telefone' placeholder="Digite seu telefone" onChange={handleChange} />
-                                <h2>CPF</h2>
-                                <input type="number" name='cpf' placeholder="000.000.000-00"  onChange={handleChange}/>
+                                <h2>ID Usuário</h2>
+                                <input type="number" name='idUsuario' placeholder="Digite o ID do usuário" onChange={handleChange} />
+                                <h2>ID Produto</h2>
+                                <input type="number" name='idProduto' placeholder="Digite o ID do produto" onChange={handleChange} />
+                                <h2>ID Estabelecimento</h2>
+                                <input type="number" name='idEstabelecimento' placeholder="Digite o ID do estabelecimento" onChange={handleChange} />
+                                <h2>Quantidade</h2>
+                                <input type="number" name='quantidade' placeholder="0" onChange={handleChange} />
                             </div>
                         </div>
-                        <button onClick={janela} id="cadastrar">Cadastrar</button>
+                        <button onClick={janela} id="cadastrar">Fazer Pedido</button>
                     </div>
                 </form>
             </Container>

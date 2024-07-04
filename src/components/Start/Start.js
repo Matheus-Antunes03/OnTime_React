@@ -34,7 +34,7 @@ a{
     background-color: #ffffff;
     color: #ff4400;
     height: 80px;
-    width: 23%;
+    width: 17%;
     position: relative;
 }
 
@@ -50,14 +50,18 @@ a{
     text-decoration: none;
     font-family: sans-serif;
     font-size: 150%;
-    margin: 2% 0 0 50%;
+    margin: 2% 0 0 30%;
     cursor: pointer;
     width: 100%;
     color: #ffffff;
 }
 
-#cadatro{
+#cadastro{
     color: #ffffff;
+}
+
+#lista{
+    margin: 0 20px 0 40px;
 }
 
 #entrar{
@@ -97,7 +101,7 @@ a{
     font-family: sans-serif;
     font-size: 160%;
     font-weight: lighter;
-    margin: 5% 0 0 236%;
+    margin: 5% 0 0 180%;
     width: 100%;
 }
 
@@ -120,7 +124,7 @@ a{
     width: 110%;
     height: 80px;
     font-weight: 600;
-    margin-left: 250%;
+    margin-left: 185%;
     margin-top: 2%;
     cursor: pointer;
     transition: all .2s ease;
@@ -135,6 +139,7 @@ a{
     width: 15%;
     margin-left: 37%;
     margin-top: -0.2%;
+    height: 79px;
 }
 
 #container2{
@@ -165,6 +170,7 @@ export function Start() {
             <a id="contato" href="contato.html" >Contato</a>
             <div id="cad">
                 <a id="cadastro" href="../../Cadastro" >Cadastre-se</a>
+                <a id="lista" href="../../Cadastros_Lista" >Cadastros</a>
                 <button id="entrar" >Entrar</button>
             </div>
         </div>
