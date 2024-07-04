@@ -24,6 +24,27 @@ const Container = styled.div`
         width: 3%;
         margin: 20px 0 0 20px;
     }
+
+    #salvar{
+    color: #ff4400;
+    background-color: #ffffff;
+    border-radius: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    width: 10%;
+    height: 80px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s ease;
+    display: block;
+    margin: 2% auto auto auto;
+}
+
+#salvar:hover{
+    box-shadow: #ffffff 0px 7px 29px 0px;
+    transform: translateY(-10px);
+}
 `
 
 export function Editar() {
@@ -39,7 +60,9 @@ export function Editar() {
                     <Lista_Estabelecimentos/>
                     <Lista_Produtos/>
                     <Lista_Pedidos/>
+                    <button id="salvar">Salvar</button>
                 </div>
+                
             </Container>
         </>
     )
