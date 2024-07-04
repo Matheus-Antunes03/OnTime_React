@@ -30,11 +30,10 @@ const Container = styled.div`
     background-color: #ffffff;
     border-radius: 30px;
     font-size: 25px;
-    font-weight: bold;
+    font-weight: bolder;
     border: none;
     width: 10%;
     height: 80px;
-    font-weight: 600;
     cursor: pointer;
     transition: all .2s ease;
     display: block;
