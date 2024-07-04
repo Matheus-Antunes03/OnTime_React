@@ -12,7 +12,7 @@ const Container = styled.div`
         height: 200px;
         background-color: #ffffff;
         display: block;
-        margin: 50px auto auto auto;
+        margin: auto auto auto auto;
         border-radius: 50px;
         text-align: center;
     }
@@ -32,6 +32,7 @@ const Container = styled.div`
     #clientes{
         color: #ff4400;
         font-weight: bold;
+        margin-top: 0;
     }
 `
 

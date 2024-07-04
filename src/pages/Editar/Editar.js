@@ -24,14 +24,9 @@ const Container = styled.div`
         width: 3%;
         margin: 20px 0 0 20px;
     }
-
-    #editar{
-        width: 3%;
-        margin: 0 0 0 80%;
-    }
 `
 
-export function Cadastros_Lista() {
+export function Editar() {
     return (
         <>
             <Container>
@@ -40,9 +35,6 @@ export function Cadastros_Lista() {
                         <img id="voltar" src={require('../../images/voltar.png')} />
                     </a>
                     <img id="ontime" src={require('../../images/ontime.png')} />
-                    <a href="../../Editar">
-                        <img id="editar" src={require('../../images/editar.png')} />
-                    </a>
                     <Lista_Clientes/>
                     <Lista_Estabelecimentos/>
                     <Lista_Produtos/>
