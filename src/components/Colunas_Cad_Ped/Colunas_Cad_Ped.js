@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { createOrder } from '../../api/create-order';
+=======
+import React from 'react';
+import styled from 'styled-components';
+>>>>>>> f8883672dc917c664c773b28f2765a6ec48f75e8
 
 const Container = styled.div`
     #container{
@@ -95,6 +100,7 @@ const Container = styled.div`
         box-shadow: #ff4400 0px 7px 29px 0px;
         transform: translateY(-10px);
     }
+<<<<<<< HEAD
 `;
 
 export function Colunas_Cad_Ped() {
@@ -153,4 +159,30 @@ export function Colunas_Cad_Ped() {
             </Container>
         </>
     );
+=======
+`
+
+export function Colunas_Cad_Ped() {
+    return (
+        <>
+            <Container>
+                <div id="container">
+                    <div id="colunas">
+                        <div id="coluna1">
+                            <h2>ID Usuário</h2>
+                            <input type="number" placeholder="Digite o ID do usuário"/>
+                            <h2>ID Produto</h2>
+                            <input type="number" placeholder="Digite o ID do produto"/>
+                            <h2>ID Estabelecimento</h2>
+                            <input type="number" placeholder="Digite o ID do estabelecimento"/>
+                            <h2>Quantidade</h2>
+                            <input type="number" placeholder="0"/>
+                        </div>
+                    </div>
+                    <button id="cadastrar">Fazer Pedido</button>
+                </div>
+            </Container>
+        </>
+    )
+>>>>>>> f8883672dc917c664c773b28f2765a6ec48f75e8
 }

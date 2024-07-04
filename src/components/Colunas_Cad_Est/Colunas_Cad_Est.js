@@ -5,7 +5,7 @@ import { createEstablishment } from '../../api/create-establishment';
 const Container = styled.div`
     #container{
         width: 90%;
-        height: 590px;
+        height: 500px;
         background-color: #ffffff;
         border-radius: 30px;
         margin: 0 500px 0 0;
@@ -73,7 +73,11 @@ const Container = styled.div`
 
     #cadastrar{
         display: block;
+<<<<<<< HEAD
         margin: 35px auto auto auto;
+=======
+        margin: 30px auto auto auto;
+>>>>>>> f8883672dc917c664c773b28f2765a6ec48f75e8
         width: 25%;
         height: 10%;
         border: none;
@@ -94,7 +98,7 @@ const Container = styled.div`
     #produto{
         display: block;
         margin: 15px auto auto auto;
-        width: 15%;
+        width: 25%;
         height: 10%;
         border: none;
         text-decoration: none;
@@ -143,6 +147,7 @@ export function Colunas_Cad_Est() {
     return (
         <>
             <Container>
+<<<<<<< HEAD
                 <form onSubmit={handleSubmit}>
                     <div id="container">
                         <div id="colunas">
@@ -156,6 +161,19 @@ export function Colunas_Cad_Est() {
                                 <h2>Inscrição municipal</h2>
                                 <input type="number" name="inscricaoMunicipal" placeholder="000.000.000-00" onChange={handleChange} />
                             </div>
+=======
+                <div id="container">
+                    <div id="colunas">
+                        <div id="coluna1">
+                            <h2>Nome do estabelecimento</h2>
+                            <input type="text" placeholder="Digite o nome do estabelecimento"/>
+                            <h2>Endereço</h2>
+                            <input type="text" placeholder="Digite seu endereço"/>
+                            <h2>Inscrição municipal</h2>
+                            <input type="number" placeholder="000.000.000-00"/>
+                            <h2>CNPJ</h2>
+                            <input type="number" placeholder="00.000.000/0000-00"/>
+>>>>>>> f8883672dc917c664c773b28f2765a6ec48f75e8
                         </div>
                         <button onClick={janela} id="cadastrar">Cadastrar</button>
                     </div>

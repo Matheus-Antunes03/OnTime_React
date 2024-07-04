@@ -26,7 +26,11 @@ export function Cadastro_Pedido() {
         <>
             <Container>
                 <div id="page">
+<<<<<<< HEAD
                     <a id="cadastro" href="../../Cadastro">
+=======
+                    <a id="cadastro" href="../../Cadastro_Estabelecimento">
+>>>>>>> f8883672dc917c664c773b28f2765a6ec48f75e8
                         <img id="voltar" src={require('../../images/voltar.png')} />
                     </a>
                     <div id="content">

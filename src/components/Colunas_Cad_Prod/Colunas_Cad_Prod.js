@@ -134,6 +134,7 @@ export function Colunas_Cad_Prod() {
     return (
         <>
             <Container>
+<<<<<<< HEAD
                 <form onSubmit={handleSubmit}>
                     <div id="container">
                         <div id="colunas">
@@ -149,6 +150,21 @@ export function Colunas_Cad_Prod() {
                                 <h2>Peso</h2>
                                 <input type="number" name="peso" placeholder="0.00" onChange={handleChange} />
                             </div>
+=======
+                <div id="container">
+                    <div id="colunas">
+                        <div id="coluna1">
+                            <h2>Nome do produto</h2>
+                            <input type="text" placeholder="Digite o nome do produto"/>
+                            <h2>Marca</h2>
+                            <input type="text" placeholder="Digite a marca"/>
+                            <h2>Preço</h2>
+                            <input type="number" placeholder="R$ 0.00"/>
+                            <h2>Peso</h2>
+                            <input type="number" placeholder="0.00"/>
+                            <h2>Data de validade</h2>
+                            <input type="date"/>
+>>>>>>> f8883672dc917c664c773b28f2765a6ec48f75e8
                         </div>
                         <button onClick={janela} id="cadastrar">Cadastrar</button>
                     </div>

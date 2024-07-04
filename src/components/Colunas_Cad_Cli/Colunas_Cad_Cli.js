@@ -5,7 +5,7 @@ import { createClient } from '../../api/create-client';
 const Container = styled.div`
     #container{
         width: 80%;
-        height: 590px;
+        height: 550px;
         background-color: #ffffff;
         border-radius: 30px;
         margin: 0 500px 0 0;
@@ -65,7 +65,11 @@ const Container = styled.div`
 
     #cadastrar{
         display: block;
+<<<<<<< HEAD
         margin: 35px auto auto auto;
+=======
+        margin: 50px auto auto auto;
+>>>>>>> f8883672dc917c664c773b28f2765a6ec48f75e8
         width: 30%;
         height: 10%;
         border: none;
@@ -120,6 +124,7 @@ export function Colunas_Cad_Cli() {
     return (
         <>
             <Container>
+<<<<<<< HEAD
                 <form onSubmit={handleSubmit}>
                     <div id="container">
                         <div id="colunas">
@@ -135,6 +140,20 @@ export function Colunas_Cad_Cli() {
                             </div>
                         </div>
                         <button onClick={janela} id="cadastrar">Cadastrar</button>
+=======
+                <div id="container">
+                    <div id="colunas">
+                        <div id="coluna1">
+                            <h2>Nome completo</h2>
+                            <input type="text" placeholder="Digite seu nome completo"/>
+                            <h2>Data de nascimento</h2>
+                            <input type="date"/>
+                            <h2>Telefone</h2>
+                            <input type="number" placeholder="(00) 90000-0000"/>
+                            <h2>CPF</h2>
+                            <input type="number" placeholder="000.000.000-00"/>
+                        </div>
+>>>>>>> f8883672dc917c664c773b28f2765a6ec48f75e8
                     </div>
                 </form>
             </Container>

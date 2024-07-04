@@ -2,10 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Start } from "../../components/Start";
 import styled from 'styled-components';
 import axios from "axios";
+<<<<<<< HEAD
 import { Edita_Clientes } from "../../components/Edita_Clientes/Edita_Clientes";
 import { Edita_Estabelecimentos } from "../../components/Edita_Estabelecimentos/Edita_Estabelecimentos";
 import { Edita_Pedidos } from "../../components/Edita_Pedidos/Edita_Pedidos";
 import { Edita_Produtos } from "../../components/Edita_Produtos/Edita_Produtos";
+=======
+import { Lista_Clientes } from "../../components/Lista_Clientes";
+import { Lista_Estabelecimentos } from "../../components/Lista_Estabelecimentos";
+import { Lista_Produtos } from "../../components/Lista_Produtos";
+import { Lista_Pedidos } from "../../components/Lista_Pedidos";
+>>>>>>> f8883672dc917c664c773b28f2765a6ec48f75e8
 
 const Container = styled.div`
     #page{
@@ -55,10 +62,17 @@ export function Editar() {
                         <img id="voltar" src={require('../../images/voltar.png')} />
                     </a>
                     <img id="ontime" src={require('../../images/ontime.png')} />
+<<<<<<< HEAD
                     <Edita_Clientes/>
                     <Edita_Estabelecimentos/>
                     <Edita_Produtos/>
                     <Edita_Pedidos/>
+=======
+                    <Lista_Clientes/>
+                    <Lista_Estabelecimentos/>
+                    <Lista_Produtos/>
+                    <Lista_Pedidos/>
+>>>>>>> f8883672dc917c664c773b28f2765a6ec48f75e8
                     <button id="salvar">Salvar</button>
                 </div>
                 

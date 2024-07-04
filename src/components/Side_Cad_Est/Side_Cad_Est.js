@@ -11,7 +11,11 @@ const Container = styled.div`
     }
 
     #logo{
+<<<<<<< HEAD
         width: 40%;
+=======
+        width: 45%;
+>>>>>>> f8883672dc917c664c773b28f2765a6ec48f75e8
         margin: 10px 0 0 10px;
     }
 `

@@ -7,8 +7,13 @@ const Container = styled.div`
     }
 
     #card{
+<<<<<<< HEAD
         width: 100%;
         height: 571px;
+=======
+        width: 80%;
+        height: 450px;
+>>>>>>> f8883672dc917c664c773b28f2765a6ec48f75e8
         background-color: #ffffff;
         border-radius: 50px;
         border: none;
@@ -25,7 +30,11 @@ const Container = styled.div`
         display: block;
         margin: auto auto auto auto;
         width: 84%;
+<<<<<<< HEAD
         height: 460px;
+=======
+        height: 400px;
+>>>>>>> f8883672dc917c664c773b28f2765a6ec48f75e8
         border-radius: 50px;
         border-width: 10px;
         border-style: solid;
@@ -34,12 +43,20 @@ const Container = styled.div`
 
     #souum{
         color: #ff4400;
+<<<<<<< HEAD
         font-size: 350%;
+=======
+        font-size: 260%;
+>>>>>>> f8883672dc917c664c773b28f2765a6ec48f75e8
         margin: 20px 0 0 0;
     }
 
     #marca1{
+<<<<<<< HEAD
         width: 50%;
+=======
+        width: 70%;
+>>>>>>> f8883672dc917c664c773b28f2765a6ec48f75e8
         height: 70px;
         background-color: #ff4400;
         display: block;
@@ -71,7 +88,11 @@ export function CardPed() {
                             <div id="marca1">
                                 <h1 id="clies">Pedido</h1>
                             </div>
+<<<<<<< HEAD
                             <img id="user" src={require('../../images/sacola.png')} />
+=======
+                            <img id="user" src={require('../../images/user.png')} />
+>>>>>>> f8883672dc917c664c773b28f2765a6ec48f75e8
                         </div>
                     </button>
                 </a>
